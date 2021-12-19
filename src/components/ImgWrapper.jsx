@@ -7,8 +7,8 @@ const ImgWrapperStyles = styled.div`
     height: 360px;
     margin: auto;
     margin-bottom: 4rem;
-    box-shadow: 0 8px 15px rgb(0 0 0 / 0.8);
-    border: 1px solid rgb(0 0 0 / 0.8);
+    box-shadow: 0 8px 15px #181B22;
+    border: 1px solid #181B22;
     img {
         width: 100%;
         height: 100%;

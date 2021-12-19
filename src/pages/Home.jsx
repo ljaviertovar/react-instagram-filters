@@ -8,8 +8,8 @@ import Filters from '../components/Filters'
 import '../styles/App.css';
 
 const HomeStyles = styled.div`
-    background-color: #262626;
-    color: #f5f3f4;
+    background-color: #2B2F38;
+    color: #F1D8C4;
     width: 100%;
     height: 100vh
 `

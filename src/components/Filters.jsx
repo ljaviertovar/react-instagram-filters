@@ -23,6 +23,7 @@ const FiltersStyles = styled.div`
         height: 120px;
         margin: auto;
         img {
+            margin-top: 8px;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -38,7 +39,13 @@ const FiltersStyles = styled.div`
         }
     }
     .filter-item--selected {
-        background-color: rgba(0,0,0,0.3);
+        background-color: #181B22;
+    }
+    .slick-prev:before{
+        color: #4CC9F0;
+    } 
+    .slick-next:before {
+        color: #4CC9F0;
     }
 `
 
@@ -48,10 +55,6 @@ const Filters = ({ filterClass, setFilterClass }) => {
         {
             name: 'Normal',
             class: 'filter-normal'
-        },
-        {
-            name: '1977',
-            class: 'filter-1997'
         },
         {
             name: 'Aden',
@@ -92,10 +95,6 @@ const Filters = ({ filterClass, setFilterClass }) => {
         {
             name: 'Earlybird',
             class: 'filter-earlybird'
-        },
-        {
-            name: 'Gingham',
-            class: 'filter-gingham'
         },
         {
             name: 'Gingham',
