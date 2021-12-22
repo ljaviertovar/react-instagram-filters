@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Slider from 'react-slick'
 
@@ -9,53 +9,23 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const FiltersStyles = styled.div`
-    width: 80%;
+    width: 70%;
     margin: auto;
-    .filter-item {
-        cursor: pointer;
-        width: 140px;
-        margin: auto;
-        padding: 10px;
-        border-radius: 6px;
-    }
-    .filter-item__img {
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        img {
-            margin-top: 8px;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-    }
-    .filter-item__name {
-        p {
-            font-size: 1.125rem;
-            text-align: center;
-            padding: 0.2rem;
-            margin-top: 0.4rem
-        }
-    }
-    .filter-item--selected {
-        background-color: #181B22;
-    }
     .slick-prev:before{
-        color: #4CC9F0;
+        color: var(--blue-1);
     } 
     .slick-next:before {
-        color: #4CC9F0;
+        color: var(--blue-1);
     }
 `
+const Filters = ({ filterClass, setFilterClass, imgRef }) => {
 
-const Filters = ({ filterClass, setFilterClass }) => {
+    useEffect(() => {
+        const divImg = imgRef.current
+        divImg.style.filter = ''
+    }, [filterClass])
 
     const filters = [
-        {
-            name: 'Normal',
-            class: 'filter-normal'
-        },
         {
             name: 'Aden',
             class: 'filter-aden'
@@ -226,11 +196,11 @@ const Filters = ({ filterClass, setFilterClass }) => {
         <FiltersStyles>
             <Slider {...settings}>
                 {
-                    filters.map(filter => {
+                    filters.map((filter, index) => {
                         return (
-                            <div>
+                            <div key={index}>
                                 <div
-                                    className={`filter-item ${filterClass == filter.class ? 'filter-item--selected' : ''}`}
+                                    className={`filter-item ${filterClass === filter.class ? 'filter-item--selected' : ''}`}
                                     onClick={() => setFilterClass(filter.class)}
                                 >
                                     <div className='filter-item__img'>
@@ -249,7 +219,6 @@ const Filters = ({ filterClass, setFilterClass }) => {
                     })
                 }
             </Slider>
-
         </FiltersStyles>
     )
 }
