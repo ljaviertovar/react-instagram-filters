@@ -2,18 +2,30 @@
 
 A clone of instagram filters
 
-![image](https://user-images.githubusercontent.com/34925280/150698831-7a461ed5-9d5b-44ea-a1d5-67b9d15ce8aa.png)
-![image](https://user-images.githubusercontent.com/34925280/150698845-b0fe92ae-5311-4568-99fe-f17d422d51d0.png)
+### Front-end
+* React js
+* CSS3
+* react-slick slick-carousel 
+* rc-slider 
+* styled-components
 
+### Installig
 
-## Technologies
+```
+npm run install
+```
 
-### :small_blue_diamond: Front-end
-:heavy_check_mark: React js\
-:heavy_check_mark: CSS3
+### Running app
+
+```
+npm run start
+```
 
 <hr>
 
-:space_invader: Test the app in the following link:
+[🚀 See the demo here.](https://insta-filters.netlify.app/)
 
-https://insta-filters.netlify.app/
+This app is explained in the following [📰 post](https://medium.com/bitsrc/how-to-create-instagram-filters-with-react-and-css-dce9f92753d0).
+
+![image](https://user-images.githubusercontent.com/34925280/150698831-7a461ed5-9d5b-44ea-a1d5-67b9d15ce8aa.png)
+![image](https://user-images.githubusercontent.com/34925280/150698845-b0fe92ae-5311-4568-99fe-f17d422d51d0.png)
